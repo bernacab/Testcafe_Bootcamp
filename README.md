@@ -8,5 +8,7 @@ NodeJS
 
 # NOTES
 Descargar https://nodejs.org/es/download/
+
 Descargar https://www.vim.org/download.php
+
 En consola ejecutar el siguiente comando: npm install -g testcafe
