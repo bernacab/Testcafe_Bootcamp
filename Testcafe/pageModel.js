@@ -10,8 +10,9 @@ class Page {
     this.link3 = Selector('a').withText('Forgot Password');
     this.input31 = Selector('#email');
     this.button32 =  Selector('form_submit');
-    this.forgot = Selector('#form_submit > i')
+    this.forgot = Selector('#form_submit > i');
     this.text33 = Selector('#content');
+    this.text34 = Selector('body > h1');
 
     //Practica 4
     this.link4 = Selector('a').withText('Checkboxes');

@@ -33,3 +33,12 @@ test('Probar que envio el email correctamente', async t =>{
     await t
         .expect(page.text33.innerText).contains('sent', 'Prueba exitosa')
 })
+
+test('Prueba negativa para el enlace de forgot password', async t =>{
+    await t
+        .click(page.link3)
+
+    await t 
+        .click(page.forgot)
+        .expect(page.text34.innerText).contains('Internal Server Error')
+})
