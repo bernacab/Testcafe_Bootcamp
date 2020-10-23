@@ -57,7 +57,7 @@ class Page {
 
     //Practica10
     this.link10 = Selector('a').withText('Context-menu')
-    this.hotspot101 = 
+    this.hostpot101 = Selector('#hot-spot');
 }
 }
 export default new Page();
