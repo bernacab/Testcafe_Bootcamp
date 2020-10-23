@@ -56,8 +56,8 @@ class Page {
     this.text91 = Selector('#result');
 
     //Practica10
-    this.link10 = Selector('a').withText('Context Menu')
-    this.hotspot101 = Selector('')
+    this.link10 = Selector('a').withText('Context Menu');
+    this.hotspot101 = Selector('#hot-spot');
 }
 }
 export default new Page();
