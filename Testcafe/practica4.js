@@ -8,8 +8,19 @@ test('Probar checkboxes', async t =>{
         .click(page.link4)
 
     await t
-        .click(page.baseCheckbox.nth(1))
+        .click(page.baseCheckbox.nth(0))
     
-    await t.expect(page.baseCheckbox.nth
-    await t.expect(page.checkbox42.checked)   
+    await t.expect(page.baseCheckbox.nth(0).checked).notOk()
+    await t.expect(page.baseCheckbox.nth(1).checked).notOk()   
+})
+
+test('Quitar checkboxes', async t =>{
+    await t
+        .click(page.link4)
+
+    await t
+        .click(page.baseCheckbox.nth(0))
+    
+    await t.expect(page.baseCheckbox.nth(0).checked).Ok()
+    await t.expect(page.baseCheckbox.nth(1).checked).Ok()   
 })
