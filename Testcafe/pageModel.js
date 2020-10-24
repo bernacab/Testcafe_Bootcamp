@@ -51,6 +51,13 @@ class Page {
     this.text705 = Selector('h1').withText('Thanks for submitting your form');
     this.text706 = Selector('body > div > div');
 
+    //Practica8
+    this.input81 = Selector('#username');
+    this.input82 = Selector('#password');
+    this.login83 = Selector('#login > button > i');
+    this.securearea = Selector('h2').withText('Secure Area');
+    this. invalid = Selector('#flash');
+
     //Practica 9
     this.link9 = Selector('a').withText('Key Presses');
     this.text91 = Selector('#result');
