@@ -30,9 +30,10 @@ class Page {
     //Practica 6
     this.link6 = Selector('a').withText('Add/Remove Elements');
     this.addBtn61 = Selector('#content > div > button');
-    this.removeBtn62 = Selector('#elements > button');
+    this.removeBtn62 = Selector('#elements > button:nth-child(1)');
     this.removeBtn63 = Selector('#elements > button:nth-child(2)');
     this.removeBtn64 = Selector('#elements > button:nth-child(3)');
+    this.removeBtn65 = Selector('#elements > button:nth-child(4)');
     
     //Practica 7
     this.input71 = Selector('#first-name');
@@ -51,7 +52,7 @@ class Page {
     this.text705 = Selector('h1').withText('Thanks for submitting your form');
     this.text706 = Selector('body > div > div');
 
-    //Practica8
+    //Practica 8
     this.input81 = Selector('#username');
     this.input82 = Selector('#password');
     this.login83 = Selector('#login > button > i');
@@ -62,9 +63,20 @@ class Page {
     this.link9 = Selector('a').withText('Key Presses');
     this.text91 = Selector('#result');
 
-    //Practica10
+    //Practica 10
     this.link10 = Selector('a').withText('Context Menu');
     this.hotspot101 = Selector('#hot-spot');
+
+    //Practica 11
+    this.link11 = Selector('a').withText('Horizontal Slider');
+    this.slider = Selector('#content > div > div > input[type=range]');
+
+    //Practica 12
+    this.sliderobj = Selector('#slider');
+    this.slider12 = {
+        handle: Selector('ui-slider-handle'),
+        value:   Selector('.slider-value')
+    };
 }
 }
 export default new Page();
