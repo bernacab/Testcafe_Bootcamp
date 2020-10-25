@@ -23,4 +23,3 @@ fixture('Test con testcafe')
         .expect(history[0].url).eql('https://the-internet.herokuapp.com/context_menu')
     
 });
-    
