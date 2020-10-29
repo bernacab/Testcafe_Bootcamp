@@ -1,10 +1,5 @@
 import page from './PageObjectModel'
-
-let rndNumber = Math.random().toString(36).substring(1,4);
-const email = 'dummy' + rndNumber + '@mailinator.com'
-const firstname = "Bernardo"
-const lastname = "Cabrera"
-const password = "88888"
+import { data } from './data';
 
 fixture('pruebas del modulo mi cuenta')
     .page('http://automationpractice.com/');
@@ -12,7 +7,9 @@ fixture('pruebas del modulo mi cuenta')
 test('Crear una cuenta', async t => {
     await t
         .click(page.signin_Link)
-        console.log("Correo", email)
+        console.log("Correo: ", data.email)
+        console.log("firstname: ", data.firstname)
+        console.log("lastname: ", data.lastname)
     
     await t
     .typeText(page.email_input, email)
@@ -29,7 +26,12 @@ test('Crear una cuenta', async t => {
     .expect(page.lastname_Address.value).contains(lastname)
 
     .typeText(page.password_input, password)
-    .typeText(page.address, "PO BOX 254")
+    .typeText(page.address, data.pbox)
+
+    .typeText(page.city, data.city)
+    .expect(page.address.value).contains(data.pbox)
+    .typeText(page.city, data.city)
+    
 
 
 
